@@ -7,11 +7,12 @@ body {
     width: 80%;
     margin: auto;
     display: grid;
-    /*grid-template-rows: 20% 80% 10%;*/
     grid-template-rows: auto auto auto;
     grid-template-areas: "nav""main""footer";
     row-gap: 20px;
     background-image: url(../media/monograma2.jpg);
+    background-color: antiquewhite;
+    background-blend-mode:color-burn;
     background-attachment: fixed;
 }
 
@@ -31,9 +32,11 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    color: white;
+    color: whitesmoke;
     background-size:contain;
     background-image: url(../media/header.jfif);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 #radio{
@@ -42,6 +45,9 @@ nav {
 
 main {
     grid-area: main;
+    background-color: bisque;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 #product_container {
@@ -64,10 +70,12 @@ main {
 }
 
 #categorie-list form{
-    background-color: brown;
+    background-color: rgb(138, 44, 44);
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat (3, auto);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 #categorie-list form > * {
@@ -77,14 +85,14 @@ main {
 
 #order{   
     border: rgb(214, 161, 92) 2px solid;
-    background-color: burlywood;
+    background-color: rgb(138, 44, 44);
     grid-row: 1;
     grid-column: 3/5;
 }
 
 #categorias{
     border: rgb(214, 161, 92) 2px solid;
-    background-color: burlywood;
+    background-color: rgb(138, 44, 44);
     grid-row: 1;
     grid-column: 1/3;
 }
@@ -92,15 +100,17 @@ main {
 #quitar_filtro{
     grid-row: 3;
     grid-column: 3/5;
-    background-color: orange;
+    background-color: rgb(75, 119, 75);
     color: white;
+    border-bottom-right-radius: 10px;
 }
 
 #filtrar{
     grid-row: 3;
     grid-column: 1/3;
-    background-color: green;
+    background-color: rgb(75, 119, 75);
     color: white;
+    border-bottom-left-radius: 10px;
 }
 
 #pages{
@@ -113,8 +123,10 @@ main {
 li{
     list-style: none;
     width: 100%;
-    background-color: bisque;
+    background-color: rgb(238, 212, 180);
     border: solid 2px rgb(247, 205, 154);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .page_link{
@@ -127,13 +139,21 @@ li{
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
+    height: 100%;
     margin: auto;
     text-align: center;
     font-family: arial;
+    background-color: rgb(221, 192, 156);
+    border: rgb(214, 161, 92) 2px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card img{
     border-radius: 10px;
+    height: 200px;
 }
 
 .price {
@@ -143,10 +163,11 @@ li{
 
 .card button {
     border: none;
+    border-radius: 5px;
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: green;
+    background-color: rgb(75, 119, 75);
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -164,6 +185,8 @@ footer {
     display: flex;
     background-color:  rgb(65, 18, 28);
     color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 footer img {

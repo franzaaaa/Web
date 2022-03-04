@@ -47,8 +47,10 @@
     <main>
         <div id="pages">
             <?php
-            for ($i = 0; $i < 3; $i++) {
-                echo '<li><a class="page_link" href="shop.php?pag=' . ($i + 1) . '">' . ($i + 1) . '</a></li>';
+            if(!isset($_POST["filtrar"])){
+                for ($i = 0; $i < 3; $i++) {
+                    echo '<li><a class="page_link" href="shop.php?pag=' . ($i + 1) . '">' . ($i + 1) . '</a></li>';
+                }
             }
             ?>
         </div>
