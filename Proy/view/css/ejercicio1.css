@@ -6,12 +6,23 @@ html {
 /*Cuerpo*/
 body {
   height: auto;
+<<<<<<< HEAD
   display: grid;
   background-image: url(../media/monograma2.jpg);
   background-attachment: fixed;
   grid-template-columns: auto;
   grid-template-rows: 8% 80% 5%;
   grid-template-areas: "header" "main" "footer";
+=======
+  /*max-width: 90%;*/
+  display: grid;
+  /*background-color: blanchedalmond;*/
+  background-image: url(../media/monograma2.jpg);
+  background-attachment: fixed;
+  grid-template-columns: 100%;
+  grid-template-rows: 8% 95% 5%;
+  grid-template-areas: "header header" "main main" "footer footer";
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 }
 
 /*Encabezado*/
@@ -23,11 +34,21 @@ header {
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+<<<<<<< HEAD
+=======
+  /*background-color: rgb(81, 23, 35);*/
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
   opacity: 90%;
   border-radius: 5px;
   width: 100%;
   max-height: 200px;
+<<<<<<< HEAD
   position: sticky top;
+=======
+  /*box-shadow: 3px -2px 10px brown;*/
+  position: sticky top;
+  /*margin-bottom: 200px;*/
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 }
 
 #c_header {
@@ -36,6 +57,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-top: 15px;
+<<<<<<< HEAD
   margin-left: 15px;
   margin-bottom: 20px;
   width: 20%;
@@ -49,6 +71,15 @@ header {
 
 header a{
   font-weight: bolder;
+=======
+  margin-bottom: 20px;
+  width: 20%;
+  height: 80%;
+  /*background-color: rgb(81, 23, 35);*/
+  background-color: rgb(81, 23, 35);
+  border-radius: 6px;
+  box-shadow: 3px -2px 10px brown;
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 }
 
 #menu{
@@ -60,7 +91,11 @@ header a{
   height: 100%;
   background-image: url(../media/baguette.png);
   background-position: center;
+<<<<<<< HEAD
   background-size: 90%;
+=======
+  background-size: 85%;
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
   background-repeat: no-repeat;
 }
 
@@ -75,9 +110,24 @@ header a{
   
 }
 
+<<<<<<< HEAD
 
 #menu2{
   width: 55%;
+=======
+/*Carousel*/
+
+.carousel-size{
+  max-width: 100%;
+  height: 300px;
+}
+
+/*.dropdown{
+}*/
+
+#menu2{
+  width: 40%;
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
   height: 100%;
   text-align: center;
   display: flex;
@@ -89,6 +139,13 @@ header a{
   width: 50%;
 }
 
+<<<<<<< HEAD
+=======
+#c_header a {
+  color: white;
+  text-decoration: none;
+}
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 
 #logo {
   display: flex;
@@ -106,6 +163,7 @@ header a{
   margin-top: 12px;
 }
 
+<<<<<<< HEAD
 /*Carousel*/
 
 #carouselExampleCaptions{
@@ -120,24 +178,35 @@ header a{
 
 
 
+=======
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 /*Principal*/
 main {
   margin-top: 10px;
   grid-area: main;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   align-items: center;
+=======
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 }
 
 #destacados {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+<<<<<<< HEAD
   row-gap: 20px;
   align-items: center;
   width: 100%;
   height: 1350px;
   margin-bottom: 60px;
+=======
+  align-items: center;
+  width: 100%;
+  height: 1350px;
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 }
 
 .producto {
@@ -145,8 +214,11 @@ main {
   text-align: center;
   height: 400px;
   width: 100%;
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
+=======
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 }
 
 .producto:hover {
@@ -154,11 +226,16 @@ main {
 }
 
 .producto:nth-child(1) {
+<<<<<<< HEAD
   background-image: url(../media/empanadilla.jpg);
+=======
+  background-image: url(../media/turron.jpg);
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
   background-size: cover;
 }
 
 .producto:nth-child(2) {
+<<<<<<< HEAD
   background-image: url(../media/Cristina_nata_definitiva.jpg);
   background-size:cover;
 }
@@ -184,10 +261,24 @@ h3 a{
 
 
 #info {
+=======
+  background-image: url(../media/panetone.jpeg);
+  background-size: cover;
+}
+
+.producto:nth-child(3) {
+  background-image: url(../media/empanadilla.jpg);
+  background-size: cover;
+}
+
+#info {
+  margin-top: 10px;
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
   text-align: center;
   color: white;
   padding: 10px;
   background-color: rgb(81, 23, 35);
+<<<<<<< HEAD
   width: 80%;
   border-radius: 15px;
   margin-top: 40px;
@@ -219,11 +310,21 @@ h3 a{
   font-weight: bolder;
   background: linear-gradient(to bottom right,rgb(255, 245, 231) 40% , rgb(81, 23, 35));
   border: 2px solid grey
+=======
+}
+
+#formulario {
+  margin-top: 10px;
+  align-items: center;
+  background-color: grey;
+  height: 300px;
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 }
 
 form {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   height: 100%;
   padding-top: 10px;
   
@@ -236,6 +337,15 @@ form {
 textarea{
   max-width:fit-content;
   width: 80%;
+=======
+  text-align: center;
+  height: 100%;
+  padding-top: 10px;
+}
+
+.input {
+  margin-bottom: 10px;
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 }
 
 #oferta{
@@ -245,17 +355,78 @@ textarea{
   background-color: bisque;
   text-align: center;
   font-weight: bolder;
+<<<<<<< HEAD
   margin-bottom: 20px;
 }
 
 .producto{
   border-radius: 15px;
+=======
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 }
 
 a{
   text-decoration: none;
 }
 
+<<<<<<< HEAD
+=======
+/*Aside*/
+/*aside {
+  grid-area: aside;
+  margin-left: 20px;
+}*/
+
+/*
+#c_aside {
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 3px -2px 10px brown;
+  font-size: 18px;
+  align-self: center;
+  flex-direction: column;
+  height: 80%;
+  width: 80%;
+  text-align: center;
+  animation: movimiento 4s;
+  background-color: white;
+  border-radius: 5px;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.lista_producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+li {
+  list-style: none;
+  background-color: rgb(75, 15, 27);
+  width: 80%;
+  align-self: center;
+  opacity: 0.7;
+  border-radius: 5px;
+  height: 50px;
+}
+li:hover {
+  list-style: none;
+  background-color: rgb(75, 15, 27);
+  box-shadow: 5px 5px grey;
+  height: 55px;
+  width: 80%;
+  align-self: center;
+  opacity: 0.7;
+  border-radius: 5px;
+}
+*/
+/*.lista_producto p:hover {
+  font-size: 20px;
+}*/
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 
 /*Footer*/
 footer {
@@ -263,7 +434,11 @@ footer {
   display: flex;
   justify-content: center;
   width: 100%;
+<<<<<<< HEAD
   height: fit-content;
+=======
+  height: 200px;
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
   margin-top: 100px;
 }
 
@@ -272,6 +447,7 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+<<<<<<< HEAD
     column-gap: 10px;
     background: linear-gradient(90deg, rgba(81,23,35,1) 5%, rgb(255, 245, 231) 33%, rgba(81,23,35,1) 69%);;
     width: 90%;
@@ -317,6 +493,36 @@ footer {
 
 .contacto div p{
   font-size: 18px;
+=======
+    background-color: rgb(81, 23, 35);
+    width: 90%;
+    height: 70%;
+}
+
+.redes{
+    flex-basis: 100px;
+    height: 80%;
+    flex-shrink: 0;
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.contacto{
+    height: 80%;
+    text-align: center;
+    flex-basis: 350px;
+    /*background-color: blueviolet;*/
+    flex-shrink: 1;
+}
+
+.contacto div{
+    color: white;
+    font-size: 20px;
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 }
 
 /*KEYFRAMES*/
@@ -341,6 +547,7 @@ footer {
 
 @media (max-width: 700px) {
   body {
+<<<<<<< HEAD
     height: auto;
     grid-template-columns: 100%;
     grid-template-rows: 7% 65% 10%;
@@ -380,4 +587,14 @@ footer {
 @font-face {
   font-family: pers;
   src: url(./../media/Storytime.ttf);
+=======
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 70% 10%;
+    grid-template-areas: "header " "main"  "footer";
+  }
+  #c_aside{
+      margin-top: 40px;
+      animation: none;
+  }
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 }

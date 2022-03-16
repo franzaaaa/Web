@@ -1,23 +1,37 @@
 <?php
 
+<<<<<<< HEAD
 //Clase para conectarse a la base de datos
 namespace model;
+=======
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 
 class Conectar
 {
 
     public static function dbConnect()
     {
+<<<<<<< HEAD
         try {
             $res = self::leer_config("../Proy/config/configuracion.xml", "../Proy/config/configuracion.xsd");
             $db = new \PDO($res[0], $res[1], $res[2]);
         } catch (\PDOException $e) {
+=======
+        $servidor = "localhost";
+        $base = "panaderia";
+        $usuario = "root";
+        $contrasenha = "";
+        try {
+            $db = new PDO('mysql:host=' . $servidor . ';dbname=' . $base, $usuario, $contrasenha);
+        } catch (PDOException $e) {
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
             echo '<p>No conectado !!</p>';
             echo $e->getMessage();
             exit;
         }
         return $db;
     }
+<<<<<<< HEAD
 
     public static function getRol()
     {
@@ -68,4 +82,6 @@ class Conectar
         $resul[] = $clave[self::getRol()];
         return $resul;
     }
+=======
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 }

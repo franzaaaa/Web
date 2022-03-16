@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 namespace model;
 
+=======
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 class Usuario_model
 {
 
@@ -17,12 +20,21 @@ class Usuario_model
         $this->db = Conectar::dbConnect();
         $this->usuario = array();
         $this->lista=array();
+<<<<<<< HEAD
         $this->info_usu=array();
     }
 
 
     
     //Obtenemos al usuario
+=======
+    }
+
+    
+    
+    
+    //Obtenemos todos los usuarios de la base de datos
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
     public function get_usuario(){
         $lista=$this->lista;
         foreach($lista as $usuario){
@@ -31,6 +43,7 @@ class Usuario_model
             }
         }
     }
+<<<<<<< HEAD
 
     /*public function obtener_mods($email){
         $res=[];
@@ -99,14 +112,23 @@ class Usuario_model
     }
 
 
+=======
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
     
     //Obtenemos los usuarios de la base de datos
     public function obtener(){
         $pdo = $this->db;
+<<<<<<< HEAD
         $sql = "select * from usuario;";
         $stmt = $pdo->query($sql);
         //$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
         while ($filas = $stmt->fetch(\PDO::FETCH_ASSOC)) {
+=======
+        $sql = "select codigo,nombre,correo,telefono,direccion,contraseña from usuario;";
+        $stmt = $pdo->query($sql);
+        //$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        while ($filas = $stmt->fetch(PDO::FETCH_ASSOC)) {
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
             $this->lista[] = $filas;
         }
         unset($pdo);
@@ -116,6 +138,7 @@ class Usuario_model
     
     public function mostrar(){
         $lista=$this->lista;
+<<<<<<< HEAD
         $msg="";
         foreach($lista as $usuario){
             $msg.="<div class='card'><p>"."</p><p>"."<b>NOMBRE:</b> ".$usuario["nombre"]."</p>"
@@ -128,17 +151,37 @@ class Usuario_model
     }
     
     
+=======
+        foreach($lista as $usuario){
+            echo "<div><p>".$usuario["codigo"]."</p><p>".$usuario["nombre"]."</p>"
+                    . "<p>".$usuario["correo"]."</p><p>".$usuario["telefono"]."</p>"
+                    . "<p>".$usuario["direccion"]."</p></div>";
+            echo "<a href='usuario.php?usu=".$usuario["codigo"]."'><button type='submit'>Eliminar</button></a>";
+        }
+    }
+    
+    
+    
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
     //Funcion que hace UPDATE en la tabla usuarios
     public function modificar()
     {
         $pdo = $this->db;
         $update = "UPDATE `usuario` SET `nombre`=:nombre,`correo`=:correo,`telefono`=:telefono,`direccion`=:direccion,`ficheros`=:ficheros WHERE `correo`='" . $_SESSION["email"] . "';";
         $stmt = $pdo->prepare($update);
+<<<<<<< HEAD
         $stmt->bindValue(':nombre', $_POST['name'], \PDO::PARAM_STR);
         $stmt->bindValue(':correo', $_POST['email'], \PDO::PARAM_STR);
         $stmt->bindValue(':telefono', $_POST['tel'], \PDO::PARAM_INT);
         $stmt->bindValue(':direccion', $_POST['direc'], \PDO::PARAM_STR);
         $stmt->bindValue(':ficheros', "../usuarios/" . $_POST['name'] . "/", \PDO::PARAM_STR);
+=======
+        $stmt->bindValue(':nombre', $_POST['name'], PDO::PARAM_STR);
+        $stmt->bindValue(':correo', $_POST['email'], PDO::PARAM_STR);
+        $stmt->bindValue(':telefono', $_POST['tel'], PDO::PARAM_INT);
+        $stmt->bindValue(':direccion', $_POST['direc'], PDO::PARAM_STR);
+        $stmt->bindValue(':ficheros', "../usuarios/" . $_POST['name'] . "/", PDO::PARAM_STR);
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
         $result = $stmt->execute();
         //echo var_dump($result);
         //echo $_SESSION["email"];
@@ -156,9 +199,15 @@ class Usuario_model
     public function modificarPsw()
     {
         $pdo = $this->db;
+<<<<<<< HEAD
         $update = "UPDATE `usuario` SET `contrasena`=:psw WHERE `correo`='" . $_SESSION["email"] . "';";
         $stmt = $pdo->prepare($update);
         $stmt->bindValue(':psw', password_hash($_POST["psw2"], PASSWORD_DEFAULT), \PDO::PARAM_STR);
+=======
+        $update = "UPDATE `usuario` SET `contraseña`=:psw WHERE `correo`='" . $_SESSION["email"] . "';";
+        $stmt = $pdo->prepare($update);
+        $stmt->bindValue(':psw', password_hash($_POST["psw2"], PASSWORD_DEFAULT), PDO::PARAM_STR);
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
         $result = $stmt->execute();
         if ($result == 1) {
             unset($stmt);
@@ -172,7 +221,11 @@ class Usuario_model
     //Comprobamos que $_POST["pwd"] sea igual a la que hay en la bbdd
     public function comprobarPsw()
     {
+<<<<<<< HEAD
         if (password_verify($_POST["psw"], $this->usuario["contrasena"])) {
+=======
+        if (password_verify($_POST["psw"], $this->usuario["contraseña"])) {
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
             $res = false;
         } else {
             $res = true;
@@ -188,12 +241,18 @@ class Usuario_model
             $pdo = $this->db;
             $sql = "INSERT INTO `mods`(`usuario`, `fecha`) VALUES (:usu,:fecha)";
             $stmt = $pdo->prepare($sql);
+<<<<<<< HEAD
             $stmt->bindValue(":usu", $this->usuario["codigo"], \PDO::PARAM_INT);
             $stmt->bindValue(":fecha", date('Y/m/d'), \PDO::PARAM_STR);
+=======
+            $stmt->bindValue(":usu", $this->usuario["codigo"], PDO::PARAM_INT);
+            $stmt->bindValue(":fecha", date('m/d/Y h:i:s a', time()), PDO::PARAM_STR);
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
             $result = $stmt->execute();
             //echo var_dump($result);
             unset($stmt);
             unset($pdo);
+<<<<<<< HEAD
         } catch (\PDOException $e) {
             print $e->getMessage();
         }
@@ -208,4 +267,10 @@ class Usuario_model
             return "¡Posible ataque de subida de ficheros!\n";
         }
     }
+=======
+        } catch (PDOException $e) {
+            print $e->getMessage();
+        }
+    }
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 }

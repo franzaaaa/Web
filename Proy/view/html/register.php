@@ -1,5 +1,6 @@
 <?php
 session_start();
+<<<<<<< HEAD
 //throw new Exception("sdfsdf");
 echo $email = isset($_POST["email"]) ? $_SESSION["email"] = $_POST["email"] : "";
 echo $name = isset($_POST["name"]) ? $_SESSION["name"] = $_POST["name"] : "";
@@ -15,6 +16,21 @@ function dbConnect() {
     try {
         $db = new PDO('mysql:host=' . $servidor . ';dbname=' . $base, $usuario, $contrasenha);
         $db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+=======
+$email = isset($_POST["email"]) ? $_SESSION["email"] = $_POST["email"] : "";
+$name = isset($_POST["name"]) ? $_SESSION["name"] = $_POST["name"] : "";
+$tel = isset($_POST["tel"]) && ctype_digit($_POST["tel"]) ? $_POST["tel"] : "";
+$direc = isset($_POST["direc"]) ? $_POST["direc"] : "";
+$oblig = ["email", "psw", "psw2", "name", "tel", "direc"];
+
+function dbConnect() {
+    $servidor = "localhost";
+    $base = "panaderia";
+    $usuario = "root";
+    $contrasenha = "";
+    try {
+        $db = new PDO('mysql:host=' . $servidor . ';dbname=' . $base, $usuario, $contrasenha);
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
     } catch (PDOException $e) {
         echo '<p>No conectado !!</p>';
         echo $e->getMessage();
@@ -89,7 +105,10 @@ function comprobarEmail($correo) {
             $res = "";
         } else {
             $res = "<br>Correo electrónico no valido";
+<<<<<<< HEAD
             unset($_SESSION["email"]);
+=======
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
         }
 
         unset($stmt);
@@ -104,18 +123,30 @@ function comprobarEmail($correo) {
 function insertUsuario() {
     try {
         $pdo= dbConnect();
+<<<<<<< HEAD
         $sql="INSERT INTO `usuario`(`codigo`, `nombre`, `correo`, `telefono`, `direccion`, `contrasena`, `ficheros`,`rol`) "
                 . "VALUES ('',:nombre,:correo,:tel,:dir,:psw,:fich,1)";
+=======
+        $sql="INSERT INTO `usuario`(`codigo`, `nombre`, `correo`, `telefono`, `direccion`, `contraseña`, `ficheros`) "
+                . "VALUES ('',:nombre,:correo,:tel,:dir,:psw,:fich)";
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
         $stmt=$pdo->prepare($sql);
         $stmt->bindValue(":nombre", $_POST["name"], PDO::PARAM_STR);
         $stmt->bindValue(":correo", $_POST["email"], PDO::PARAM_STR);
         $stmt->bindValue(":tel", $_POST["tel"], PDO::PARAM_INT);
         $stmt->bindValue(":dir", $_POST["direc"], PDO::PARAM_STR);
         $stmt->bindValue(":psw", password_hash($_POST["psw"],PASSWORD_DEFAULT) , PDO::PARAM_STR);
+<<<<<<< HEAD
         $stmt->bindValue(":fich", "../../../usuarios/".$_POST["email"]."/" , PDO::PARAM_STR);
         //$stmt->execute();
         if($stmt->execute() && !file_exists("../../../usuarios/".$_POST["email"])){
             mkdir("../../../usuarios/".$_POST["email"], 0777,true);
+=======
+        $stmt->bindValue(":fich", "../usuarios/".$_POST["email"]."/" , PDO::PARAM_STR);
+        //$stmt->execute();
+        if($stmt->execute() && !file_exists("../../usuarios/".$_POST["email"])){
+            mkdir("../../usuarios/".$_POST["email"], 0777,true);
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
         }
         unset($stmt);
         unset($pdo);
@@ -169,7 +200,11 @@ if (!isset($_POST["registrar"]) || isset($_POST["registrar"]) && is_string(compr
                     ?>
                 </div>
                 <div class="container signin">
+<<<<<<< HEAD
                     <p>¿Ya tienes una cuenta? <a href="./view/html/login.php">Logueate aquí!</a></p>
+=======
+                    <p>¿Ya tienes una cuenta? <a href="login.php">Logueate aquí!</a>.</p>
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
                 </div>
             </form>
         </body>
@@ -179,7 +214,11 @@ if (!isset($_POST["registrar"]) || isset($_POST["registrar"]) && is_string(compr
     session_unset();
     session_destroy();
     insertUsuario();
+<<<<<<< HEAD
     require_once("mail_register.php");
     header("Location:view/html/login.php");
+=======
+    header("Location:login.php");
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 }
 ?>

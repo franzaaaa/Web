@@ -45,6 +45,7 @@
         </div>
     </nav>
     <main>
+<<<<<<< HEAD
         <?php
             if(!empty($_SESSION["carrito"])){          
         ?>
@@ -52,6 +53,8 @@
         <?php
             }
         ?>
+=======
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
         <div id="pages">
             <?php
             if(!isset($_POST["filtrar"])){
@@ -75,6 +78,7 @@
             ?>
         </div>
     </main>
+<<<<<<< HEAD
             <?php
             if(isset($_POST["comprar"])){
                 if(!empty($_POST["cod"])){
@@ -83,6 +87,17 @@
                
             }
             ?>
+=======
+    <footer>
+        <div id="c_footer">         
+                <img src="view/media/baguette.png" alt="" />            
+                    <p>Contacto</p>
+                    <p>Empresa</p>   
+                <img src="view/media/dialibre.jfif" alt="" />
+           
+        </div>
+    </footer>
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 
     <script>
         

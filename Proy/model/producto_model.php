@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 namespace model;
 
+=======
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 class Producto_model {
 
     private $db;
@@ -36,7 +39,11 @@ class Producto_model {
         $stmt=$pdo->query($sql);
         
         
+<<<<<<< HEAD
         $filas=$stmt->fetchAll(\PDO::FETCH_ASSOC);
+=======
+        $filas=$stmt->fetchAll(PDO::FETCH_ASSOC);
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
         foreach ($filas as $fila){
             $this->producto[]=$fila;
         }
@@ -47,11 +54,19 @@ class Producto_model {
 
     //Mostramos los productos por pantalla
     public function mostrar() {
+<<<<<<< HEAD
+=======
+        /* $admin = "";
+          if ($_SESSION["email"] == "franza@gmail.com") {
+          $admin = ""<p><button><a href='view/html/index.php?producto=".$prod["codigo"]."'>Editar</a></button></p>"";
+          } */
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
              
         $producto = "";
         foreach ($this->producto as $prod) {
             $producto .= "<div class='card'>
             <img src='" . $prod["url"] . "' style='width:100%'>
+<<<<<<< HEAD
             <h1>" . $prod["nombre"] . "</h1>
             <p class='price'>" . $prod["precio"] . " €</p>
             <p>" . $prod["descripcion"] . "</p>";
@@ -64,6 +79,16 @@ class Producto_model {
             }
             else{
                 $producto.="<p><button disabled><a>Ver Ingredientes</a></button></p><p><button type='submit' disabled>Al carrito</button></p></form></div>";
+=======
+            <h1 onclick='mostrar_info()'>" . $prod["nombre"] . "</h1>
+            <p class='price'>" . $prod["precio"] . " €</p>
+            <p>" . $prod["descripcion"] . "</p>";
+            if(isset($_SESSION["email"])){
+                $producto.="<p><button><a href='ingrediente.php?producto=" . $prod["codigo"] . "'>Ver Ingredientes</a></button></p><p><button>Al carrito</button></p></div>";
+            }
+            else{
+                $producto.="<p><button disabled><a>Ver Ingredientes</a></button></p><p><button type='submit' disabled>Al carrito</button></p></div>";
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
             }
             
         }
@@ -87,23 +112,42 @@ class Producto_model {
             }
             //echo var_dump($sql)."<br>";
             $stmt = $pdo->prepare($sql);
+<<<<<<< HEAD
             $stmt->bindValue(":grupo", $grupo, \PDO::PARAM_STR);
             $stmt->execute();
 
 
             while ($filas = $stmt->fetch(\PDO::FETCH_ASSOC)) {
+=======
+            $stmt->bindValue(":grupo", $grupo, PDO::PARAM_STR);
+            $stmt->execute();
+
+
+            while ($filas = $stmt->fetch(PDO::FETCH_ASSOC)) {
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
                 $this->producto_ordenado[] = $filas;
             }
             unset($pdo);
             unset($stmt);
             return $this->producto_ordenado;
+<<<<<<< HEAD
         } catch (\PDOException $e) {
+=======
+        } catch (PDOException $e) {
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
             die("ERROR: " . $e->getMessage() . "<br>" . $e->getCode());
         }
     }
 
     //Mostramos los productos ordenados
     public function mostrar_ordenado() {
+<<<<<<< HEAD
+=======
+        /* $admin = "";
+          if ($_SESSION["email"] == "franza@gmail.com") {
+          $admin = "<p><button><a href='view/html/index.php?producto=".$prod["codigo"]."'>Editar</a></button></p>";
+          } */
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
         
         $producto = "";
         foreach ($this->producto_ordenado as $prod) {
@@ -112,6 +156,7 @@ class Producto_model {
             <h1>" . $prod["nombre"] . "</h1>
             <p class='price'>" . $prod["precio"] . " €</p>
             <p>" . $prod["descripcion"] . "</p>";
+<<<<<<< HEAD
             $producto.="<form action='"; 
             $producto.="../Proy/model/anadir_carrito.php";
             $producto.="' method='POST'>";
@@ -121,11 +166,19 @@ class Producto_model {
             }
             else{
                 $producto.="<p><button disabled><a>Ver Ingredientes</a></button></p><p><button type='submit' disabled>Al carrito</button></p></form></div>";
+=======
+            if(isset($_SESSION["email"])){
+                $producto.="<p><button><a href='ingrediente.php?producto=" . $prod["codigo"] . "'>Ver Ingredientes</a></button></p><p><button>Al carrito</button></p></div>";
+            }
+            else{
+                $producto.="<p><button disabled><a>Ver Ingredientes</a></button></p><p><button type='submit' disabled>Al carrito</button></p></div>";
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
             }
         }
         return $producto;
     }
 
+<<<<<<< HEAD
     public function anadir_carrito($cod){
         if (isset($_SESSION['carrito'][$cod])) {
             $_SESSION['carrito'][$cod] += 1;
@@ -136,4 +189,6 @@ class Producto_model {
 
     
 
+=======
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 }

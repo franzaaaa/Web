@@ -25,12 +25,40 @@ try {
 
 if (isset($_SESSION["email"])) {
 ?>
+<<<<<<< HEAD
   
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST" enctype="multipart/form-data">
                 <div class="container">
                     <h1>TU PERFIL</h1>
                     <p id="sesion">Bienvenido:</p>
                     
+=======
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="../css/profile_register.css">
+        </head>
+
+        <body>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST">
+                <div class="container">
+                    <h1>TU PERFIL</h1>
+                    <p>MODIFICA LOS DATOS A TO GUSTO</p>
+                    <hr>
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
                     <label for="name"><b>NOMBRE</b></label>
                     <input type="text" placeholder="Enter name" name="name" id="name" required value="<?php echo $atrib_usuario["nombre"]; ?>">
 
@@ -48,16 +76,23 @@ if (isset($_SESSION["email"])) {
 
                     <label for="dir"><b>DIRECCIÓN</b></label>
                     <input type="text" placeholder="¿A dónde enviamos el pedido?" name="direc" id="direc" required value="<?php echo $atrib_usuario["direccion"]; ?>">
+<<<<<<< HEAD
                     
                     <label for="fich"><b>FICHEROS</b></label>
                     <input type="file" name="fich" id="fich">
                     <input type="submit" name="enviar" value="Enviar">
+=======
+
+                    <label for="fich"><b>FICHEROS</b></label>
+                    <input type="file" name="fich" id="fich">
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 
                     <button type="submit" name="modificar" class="registerbtn">MODIFICAR</button>
                     <button type="submit" name="logout" class="registerbtn">SAÍR</button>
                
                 </div>
             </form>
+<<<<<<< HEAD
             <div id="tabla_modificaciones">
                 <h1>Historial de Modificaciones:</h1>   
                 <div id="tabla_modificaciones_inner">
@@ -104,6 +139,24 @@ if (isset($_SESSION["email"])) {
             }
             ?>
             </div>  
+=======
+            <?php
+            if($_SESSION["email"]=="franza@gmail.com"){ 
+                $usuario->mostrar();
+            ?>
+                
+               
+            <?php
+            }
+            ?>
+        </body>
+
+    </html>
+
+    </body>
+
+    </html>
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 <?php
 } else {
     echo "<h3>Ha ocurrido un problema</h3>";

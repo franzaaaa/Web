@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/xampp/htdocs/Web-master/Proy/index.php</file>
             <file>file:/C:/xampp/htdocs/Web-master/composer.json</file>
             <file>file:/C:/xampp/htdocs/Web-master/composer.lock</file>
@@ -13,6 +14,22 @@
             <file>file:/C:/xampp/htdocs/Web-master/Proy/mail_register.php</file>
             <file>file:/C:/xampp/htdocs/Web-master/Proy/model/producto_model.php</file>
             <file>file:/C:/xampp/htdocs/Web-master/Proy/mail_productos.php</file>
+=======
+            <file>file:/C:/xampp/htdocs/Proy/Proy/view/html/profile_view.php</file>
+            <file>file:/C:/xampp/htdocs/Proy/Proy/ingrediente.php</file>
+            <file>file:/C:/xampp/htdocs/Proy/Proy/model/ingrediente_model.php</file>
+            <file>file:/C:/xampp/htdocs/Proy/Proy/model/usuario_model.php</file>
+            <file>file:/C:/xampp/htdocs/Proy/Proy/controller/usuario_controller.php</file>
+            <file>file:/C:/xampp/htdocs/Proy/Proy/model/conectar.php</file>
+            <file>file:/C:/xampp/htdocs/Proy/Proy/view/html/ingrediente_view.php</file>
+            <file>file:/C:/xampp/htdocs/Proy/Proy/usuario.php</file>
+            <file>file:/C:/xampp/htdocs/Proy/Proy/profile.php</file>
+            <file>file:/C:/xampp/htdocs/Proy/Proy/index.php</file>
+            <file>file:/C:/xampp/htdocs/Proy/Proy/shop.php</file>
+            <file>file:/C:/xampp/htdocs/Proy/Proy/model/producto_model.php</file>
+            <file>file:/C:/xampp/htdocs/Proy/Proy/view/html/shop_view.php</file>
+            <file>file:/C:/xampp/htdocs/Proy/Proy/controller/ingrediente_controller.php</file>
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
         </group>
     </open-files>
 </project-private>

@@ -11,6 +11,7 @@
     <?php
 
         require_once("controller/usuario_controller.php");
+<<<<<<< HEAD
         //echo password_hash(1, PASSWORD_DEFAULT);
 
     ?>
@@ -18,4 +19,10 @@
 <script>
    document.getElementById("sesion").innerHTML+=" "+localStorage.getItem('sesion');
 </script>
+=======
+        //echo var_dump($usuario);
+
+    ?>
+</body>
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 </html>

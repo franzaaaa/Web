@@ -1,5 +1,9 @@
 {
     "require": {
+<<<<<<< HEAD
         "phpmailer/phpmailer": "^6.5"
+=======
+        "phpmailer/phpmailer": "^6.6"
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
     }
 }

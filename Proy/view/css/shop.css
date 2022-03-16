@@ -16,6 +16,7 @@ body {
     background-attachment: fixed;
 }
 
+<<<<<<< HEAD
 nav a{
     text-decoration: none;
     color: white;
@@ -23,6 +24,11 @@ nav a{
 
 a{
     text-decoration: none;
+=======
+a{
+    text-decoration: none;
+    color: white;
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 }
 
 #product_container > * {
@@ -30,10 +36,13 @@ a{
     max-height: 100%;
 }
 
+<<<<<<< HEAD
 #product_container a{
     color:white;
 }
 
+=======
+>>>>>>> 870bdfd09394e974286f034bc9472b23c465c9a8
 nav {
     grid-area: nav;
     display: flex;
