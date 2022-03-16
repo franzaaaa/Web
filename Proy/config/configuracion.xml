@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuracion>
+    <ip>vl23934.dinaserver.com</ip>
+    <nombre>a16d_panaderia</nombre>
+    <usuario>a16daw2diesteis</usuario>
+    <clave>1@52T0j5QK#@</clave>
+
+    <ip>vl23934.dinaserver.com</ip>
+    <nombre>a16d_panaderia</nombre>
+    <usuario>a16d_user</usuario>
+    <clave>1@52T0j5QK#@</clave>
+
+    <ip>vl23934.dinaserver.com</ip>
+    <nombre>a16d_panaderia</nombre>
+    <usuario>a16d_anon</usuario>
+    <clave>1@52T0j5QK#@</clave>
+</configuracion>
